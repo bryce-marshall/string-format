@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "sourceMap": false,
+        "outDir": ".",
+        "declaration": true,
+        "pretty": true
+    },
+    "include": [
+        "./string-format.nodejs/package-src"
+    ],
+    "exclude": [
+        ".vscode",
+        "node_modules",
+        "test*"
+    ]
+}
