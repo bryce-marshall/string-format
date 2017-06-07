@@ -1,10 +1,10 @@
-# @brycemarshall\string-format
+# @brycemarshall/string-format
 A Typescript port of Matt Esch's string-template library (original NPM Package at https://www.npmjs.com/package/string-template)
 I created this package because I could not get the orginal string-template package to work in NodeJS when building from a typescript environment.
 
 ## Installation
 
-`npm install @brycemarshall\string-format`
+`npm install @brycemarshall/string-format`
 
 #The module exports the following two functions:
 
@@ -18,7 +18,7 @@ function stringFormatc(format: string, inline?: boolean): string
 A simple string formatting function based on named or indexed arguments
 
 ```ts
-import { stringFormat } from '@brycemarshall\string-format';
+import { stringFormat } from '@brycemarshall/string-format';
 
 // Format using an object hash with keys matching [0-9a-zA-Z]+
 
@@ -51,13 +51,13 @@ let text = stringFormat("{{0}}")
 
 # Usage - stringFormatc
 
-`@brycemarshall\string-format` exposes two template compiling options for when you need the
+`@brycemarshall/string-format` exposes two template compiling options for when you need the
 additional performance. Arguments passed to the compiled template are of the
 same structure as the main `string-template` function, so either a single
 object/array or a list of arguments.
 
 ```ts
-import { stringFormatc } from '@brycemarshall\string-format';
+import { stringFormatc } from '@brycemarshall/string-format';
 
 let greetingTemplate = stringFormatc("Hello {0}, you have {1} unread messages")
 
@@ -71,7 +71,7 @@ concatenation statement, interleaving the correct arguments you have passed in.
 
 ```ts
 
-import { stringFormatc } from '@brycemarshall\string-format';
+import { stringFormatc } from '@brycemarshall/string-format';
 
 let greetingTemplate = stringFormatc("Hello {0}, you have {1} unread messages", true)
 // -> greetingTemplate generated using new Function

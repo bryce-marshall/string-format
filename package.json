@@ -1,7 +1,7 @@
 {
   "name": "@brycemarshall/string-format",
-  "version": "1.0.0",
-  "description": "A typescript wrapper for Matt Esch's string-template package.",
+  "version": "1.0.1",
+  "description": "A typescript port of Matt Esch's string-template package.",
   "repository": {
     "type": "git",
     "url": "https://github.com/bryce-marshall/string-format.git"
