@@ -32,6 +32,8 @@ class Test {
       { name: "Single Parameter", format: "Hello {0}!", args: ["World"], params: true, expected: "Hello World!" },
       { name: "Multiple Parameters", format: "0: {0}, 1: {1}, 2: {2}", args: ["Zero", "One", "Two"], params: true, expected: "0: Zero, 1: One, 2: Two" },
       { name: "No Parameters Missing Argument", format: "Hello {0}!", params: true, expected: "Hello !" },
+      { name: "No Parameters Missing Property", format: "Hello {name}!", args: {}, params: true, expected: "Hello !" },
+      { name: "No Parameters Missing Property (subclassed)", format: "Hello {name}!", args: new TestTypeOne(), params: true, expected: "Hello !" },
     ];
 
     for (let item of this.items) {
