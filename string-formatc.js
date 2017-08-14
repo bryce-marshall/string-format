@@ -19,8 +19,7 @@ var replaceTemplate = "    var args\n" +
     "    }\n\n" +
     "    return {0}";
 var literalTemplate = "\"{0}\"";
-var argTemplate = "(result = args.hasOwnProperty(\"{0}\") ? " +
-    "args[\"{0}\"] : null, \n        " +
+var argTemplate = "(result = args[\"{0}\"], \n        " +
     "(result === null || result === undefined) ? \"\" : result)";
 function compileImp(string, inline) {
     var replacements = string.match(nargs);

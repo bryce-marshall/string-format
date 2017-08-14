@@ -7,11 +7,7 @@
         "sourceMap": true,
         "declaration": true,
         "noImplicitAny": false,
-        "outDir": "build"/*,
-        "lib": [
-            "es2016",
-            "dom"
-        ]*/
+        "outDir": "build"
     },
     "include": [
         "*.ts",

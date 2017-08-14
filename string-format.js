@@ -27,7 +27,7 @@ function formatStringImp(format) {
             return i;
         }
         else {
-            result = _args.hasOwnProperty(i) ? _args[i] : null;
+            result = _args[i];
             if (result === null || result === undefined) {
                 return "";
             }

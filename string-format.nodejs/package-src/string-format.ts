@@ -23,7 +23,7 @@ function formatStringImp(format: string): string {
             format[index + match.length] === "}") {
             return i
         } else {
-            result = _args.hasOwnProperty(i) ? _args[i] : null
+            result = _args[i];
             if (result === null || result === undefined) {
                 return ""
             }

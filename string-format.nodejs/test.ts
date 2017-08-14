@@ -1,6 +1,23 @@
 import { stringFormat } from './package-src';
 import { stringFormatc } from './package-src';
 
+class TestTypeOne {
+  get a(): string {
+    return "First";
+  }
+
+  get b(): string {
+    return "Second";
+  }
+
+  get c(): string {
+    return "Third";
+  }
+}
+
+class TestTypeTwo extends TestTypeOne {
+}
+
 class Test {
   private items: any[];
 
@@ -9,6 +26,8 @@ class Test {
       { name: "Single Named Property", format: "Hello {name}!", args: { name: "World" }, expected: "Hello World!" },
       { name: "Single Element Array", format: "Hello {0}!", args: ["World"], expected: "Hello World!" },
       { name: "Multiple Named Properties", format: "a: {a}, b: {b}, c: {c}", args: { a: "First", b: "Second", c: "Third" }, expected: "a: First, b: Second, c: Third" },
+      { name: "Multiple Named Properties - Property", format: "a: {a}, b: {b}, c: {c}", args: new TestTypeOne(), expected: "a: First, b: Second, c: Third" },
+      { name: "Multiple Named Properties - Property (subclassed)", format: "a: {a}, b: {b}, c: {c}", args: new TestTypeTwo(), expected: "a: First, b: Second, c: Third" },
       { name: "Multiple Element Array", format: "0: {0}, 1: {1}, 2: {2}", args: ["Zero", "One", "Two"], expected: "0: Zero, 1: One, 2: Two" },
       { name: "Single Parameter", format: "Hello {0}!", args: ["World"], params: true, expected: "Hello World!" },
       { name: "Multiple Parameters", format: "0: {0}, 1: {1}, 2: {2}", args: ["Zero", "One", "Two"], params: true, expected: "0: Zero, 1: One, 2: Two" },
