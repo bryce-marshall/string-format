@@ -12,7 +12,7 @@
         "pretty": true
     },
     "include": [
-        "./string-format.nodejs/package-src"
+        "../string-format.nodejs/package-src"
     ],
     "exclude": [
         ".vscode",
